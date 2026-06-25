@@ -200,7 +200,7 @@
         <div class="mini-progress"><span id="topProgressText">0 / 0</span><div class="mini-track"><div class="mini-bar" id="topProgressBar"></div></div></div>
         <button class="secondary" id="toggleWrongBtn" type="button">查看錯題本</button>
         <button class="secondary" id="exportWrongBtn" type="button">匯出錯題 Excel</button>
-        <button class="danger" id="resetBtn" type="button">重新設定</button>
+        <button class="danger" id="resetBtn" type="button">結束重來</button>
       </div>
     </div>
   </div>
@@ -323,7 +323,7 @@
       if (q.category === 'IPMA自我評量') return q.source.replace(/\.pdf$/i, '').replace(/^Chapter\s*/, 'Chapter ');
       if (q.category === 'IPMA考古題') return q.section === 'IPMA1' ? 'IPMA 考古題（一）' : q.section === 'IPMA2' ? 'IPMA 考古題（二）' : q.source.replace(/\.pdf$/i, '');
       if (q.category === 'APMA出題') return `APMA ${q.section}`;
-      if (q.category === '模擬試題400題') return '模擬試題 1-400（紅字答案＋勘誤）';
+      if (q.category === '模擬試題400題') return '模擬試題 1-400';
       return q.section || q.source || q.category;
     }
     function numericFirst(s) {
